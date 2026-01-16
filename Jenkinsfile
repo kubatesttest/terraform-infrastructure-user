@@ -76,7 +76,7 @@ pipeline {
             steps {
                 echo "Infrastructure changes applied - triggering application pipeline"
                 // Replace userX with your user number
-                build job: "terraform-application-userX/${env.BRANCH_NAME}",
+                build job: "terraform-application-user00-2/${env.BRANCH_NAME}",
                       wait: true,
                       propagate: true
             }
