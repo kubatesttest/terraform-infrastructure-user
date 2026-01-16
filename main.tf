@@ -31,7 +31,7 @@ resource "aws_vpc_security_group_ingress_rule" "web_http" {
   from_port         = 80
   to_port           = 80
   ip_protocol       = "tcp"
-  cidr_ipv4         = "0.0.0.0/0"
+  cidr_ipv4         = "10.0.0.0/8"  # Restrict to private
 
   tags = {
     Name = "${local.name_prefix}-web-http"
